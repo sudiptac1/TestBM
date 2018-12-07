@@ -3,6 +3,8 @@ package stepDefinitions;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.By.ById;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -14,10 +16,13 @@ import cucumber.api.java.Before;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
+
+import org.junit.Assert;
 import pageObjects.BPLogin_Page;
 
 
 import org.apache.log4j.Logger;
+import org.junit.Assert;
 
 
 	public class loginfeature {
@@ -38,7 +43,7 @@ import org.apache.log4j.Logger;
 
 		@After
 		public void quitBrowser() {
-			//driver.quit();
+			driver.quit();
 		}
 
 		@Given("^I am in BMJ bestpractice login page$")
@@ -51,17 +56,16 @@ import org.apache.log4j.Logger;
 		
 		@When("^I enter invalid credentials$")
 		public void i_enter_invalid_credentials() throws Throwable {
-		    // Write code here that turns the phrase above into concrete actions
-			//driver.manage().window().maximize();
-			System.out.println("window size"+driver.manage().window().getSize());
-			driver.manage().window().fullscreen();
+		  
+			
 			BPLogin_Page logInPage = new BPLogin_Page();
 			logInPage.ele_UserEmail(driver).sendKeys("abc@abc.com");
 			logInPage.ele_UserPass(driver).sendKeys("pass");
-		    //loginSubmit
+		 
 			
-			logInPage.btn_CookiDis(driver).click();
-			System.out.println("window size2"+driver.manage().window().getSize());
+			JavascriptExecutor js = (JavascriptExecutor) driver;
+	        js.executeScript("window.scrollBy(0,400)");
+			
 			WebElement element1 = (new WebDriverWait(driver, 10))
 					.until(ExpectedConditions.elementToBeClickable(By.cssSelector(".form-group #loginSubmit")));
 
@@ -69,19 +73,15 @@ import org.apache.log4j.Logger;
 			logger.info("Login Button clicked  with invalid credentials at BMJ bestpractice Login page");
 		}
 		
-		@Then("^I should not be logged in$")
-		public void i_should_not_be_logged_in() throws Throwable {
-		    // Write code here that turns the phrase above into concrete actions
+		@Then("^I see the error message \"([^\"]*)\"$")
+		public void i_see_the_error_message(String arg1) throws Throwable {
 		    
+			BPLogin_Page logInPage = new BPLogin_Page();
+			
+			String actualStrlogInPage = logInPage.ele_LoginFailed(driver).getAttribute("innerText");
+			Assert.assertEquals("Error messages are not matching", arg1, actualStrlogInPage);
 		}
-		
-		@Then("^I get error message$")
-		public void i_get_error_message() throws Throwable {
-		    // Write code here that turns the phrase above into concrete actions
-		    
-		
-
-	}
 
 
 }
+	

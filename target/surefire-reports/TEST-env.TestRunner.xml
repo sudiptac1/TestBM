@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="5" failures="0" name="env.TestRunner" time="0.059" errors="2" skipped="2">
+<testsuite tests="25" failures="0" name="env.TestRunner" time="1.219" errors="0" skipped="14">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="/Library/Java/JavaVirtualMachines/jdk1.8.0_172.jdk/Contents/Home/jre/lib"/>
@@ -27,7 +27,7 @@
 "/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="os.name" value="Mac OS X"/>
-    <property name="classworlds.conf" value="/Users/manaschatterjee/eclipse-workspace/.metadata/.plugins/org.eclipse.m2e.launching/launches/m2conf7677071758890322362.tmp"/>
+    <property name="classworlds.conf" value="/Users/manaschatterjee/eclipse-workspace/.metadata/.plugins/org.eclipse.m2e.launching/launches/m2conf2574950709929642307.tmp"/>
     <property name="sun.jnu.encoding" value="UTF-8"/>
     <property name="java.library.path" value="/Users/manaschatterjee/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:."/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
@@ -63,99 +63,57 @@
     <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="sun.cpu.isalist" value=""/>
   </properties>
-  <testcase classname="Scenario: Test Login with invalid login credentials" name="Given I am in BMJ bestpractice login page" time="0.009"/>
-  <testcase classname="Scenario: Test Login with invalid login credentials" name="When I enter invalid credentials" time="0.011">
-    <error message="no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;.cc-btn cc-dismiss&quot;}
-  (Session info: chrome=70.0.3538.110)
-  (Driver info: chromedriver=2.35.528157 (4429ca2590d6988c0745c24c8858745aaaec01ef),platform=Mac OS X 10.11.6 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 0 milliseconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;3.7.0&apos;, revision: &apos;2321c73&apos;, time: &apos;2017-11-02T22:22:35.584Z&apos;
-System info: host: &apos;Manass-Air&apos;, ip: &apos;2a02:c7f:c61c:f500:8957:8aa:77d6:fe68%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.11.6&apos;, java.version: &apos;1.8.0_172&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.35.528157 (4429ca2590d698..., userDataDir: /var/folders/ck/lbkmm_wj21v...}, cssSelectorsEnabled: true, databaseEnabled: false, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 70.0.3538.110, webStorageEnabled: true}
-Session ID: 3321cb7514d60c6626c95f2e45f89254
-*** Element info: {Using=css selector, value=.cc-btn cc-dismiss}" type="org.openqa.selenium.NoSuchElementException">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;.cc-btn cc-dismiss&quot;}
-  (Session info: chrome=70.0.3538.110)
-  (Driver info: chromedriver=2.35.528157 (4429ca2590d6988c0745c24c8858745aaaec01ef),platform=Mac OS X 10.11.6 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 0 milliseconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;3.7.0&apos;, revision: &apos;2321c73&apos;, time: &apos;2017-11-02T22:22:35.584Z&apos;
-System info: host: &apos;Manass-Air&apos;, ip: &apos;2a02:c7f:c61c:f500:8957:8aa:77d6:fe68%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.11.6&apos;, java.version: &apos;1.8.0_172&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.35.528157 (4429ca2590d698..., userDataDir: /var/folders/ck/lbkmm_wj21v...}, cssSelectorsEnabled: true, databaseEnabled: false, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 70.0.3538.110, webStorageEnabled: true}
-Session ID: 3321cb7514d60c6626c95f2e45f89254
-*** Element info: {Using=css selector, value=.cc-btn cc-dismiss}
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
-	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
-	at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)
-	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)
-	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:600)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:370)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByCssSelector(RemoteWebDriver.java:464)
-	at org.openqa.selenium.By$ByCssSelector.findElement(By.java:430)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)
-	at pageObjects.BPLogin_Page.btn_CookiDis(BPLogin_Page.java:38)
-	at stepDefinitions.loginfeature.i_enter_invalid_credentials(loginfeature.java:63)
-	at ✽.When I enter invalid credentials(login.feature:5)
-</error>
-    <system-out>window size(1200, 697)
-</system-out>
-  </testcase>
-  <testcase classname="Scenario: Test Login with invalid login credentials" name="Scenario: Test Login with invalid login credentials" time="0.013">
-    <error message="no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;.cc-btn cc-dismiss&quot;}
-  (Session info: chrome=70.0.3538.110)
-  (Driver info: chromedriver=2.35.528157 (4429ca2590d6988c0745c24c8858745aaaec01ef),platform=Mac OS X 10.11.6 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 0 milliseconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;3.7.0&apos;, revision: &apos;2321c73&apos;, time: &apos;2017-11-02T22:22:35.584Z&apos;
-System info: host: &apos;Manass-Air&apos;, ip: &apos;2a02:c7f:c61c:f500:8957:8aa:77d6:fe68%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.11.6&apos;, java.version: &apos;1.8.0_172&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.35.528157 (4429ca2590d698..., userDataDir: /var/folders/ck/lbkmm_wj21v...}, cssSelectorsEnabled: true, databaseEnabled: false, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 70.0.3538.110, webStorageEnabled: true}
-Session ID: 3321cb7514d60c6626c95f2e45f89254
-*** Element info: {Using=css selector, value=.cc-btn cc-dismiss}" type="org.openqa.selenium.NoSuchElementException">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;.cc-btn cc-dismiss&quot;}
-  (Session info: chrome=70.0.3538.110)
-  (Driver info: chromedriver=2.35.528157 (4429ca2590d6988c0745c24c8858745aaaec01ef),platform=Mac OS X 10.11.6 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 0 milliseconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;3.7.0&apos;, revision: &apos;2321c73&apos;, time: &apos;2017-11-02T22:22:35.584Z&apos;
-System info: host: &apos;Manass-Air&apos;, ip: &apos;2a02:c7f:c61c:f500:8957:8aa:77d6:fe68%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.11.6&apos;, java.version: &apos;1.8.0_172&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.35.528157 (4429ca2590d698..., userDataDir: /var/folders/ck/lbkmm_wj21v...}, cssSelectorsEnabled: true, databaseEnabled: false, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 70.0.3538.110, webStorageEnabled: true}
-Session ID: 3321cb7514d60c6626c95f2e45f89254
-*** Element info: {Using=css selector, value=.cc-btn cc-dismiss}
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
-	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
-	at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)
-	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)
-	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:600)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:370)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByCssSelector(RemoteWebDriver.java:464)
-	at org.openqa.selenium.By$ByCssSelector.findElement(By.java:430)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)
-	at pageObjects.BPLogin_Page.btn_CookiDis(BPLogin_Page.java:38)
-	at stepDefinitions.loginfeature.i_enter_invalid_credentials(loginfeature.java:63)
-	at ✽.When I enter invalid credentials(login.feature:5)
-</error>
-  </testcase>
-  <testcase classname="Scenario: Test Login with invalid login credentials" name="Then I should not be logged in" time="0.013">
+  <testcase classname="Scenario: Test Login with invalid login credentials" name="Given I am in BMJ bestpractice login page" time="0.003"/>
+  <testcase classname="Scenario: Test Login with invalid login credentials" name="When I enter invalid credentials" time="0"/>
+  <testcase classname="Scenario: Test Login with invalid login credentials" name="Then I see the error message &quot;The entered sign-in details are incorrect. Please enter a valid username and password and try again.&quot;" time="0.002">
     <skipped/>
   </testcase>
-  <testcase classname="Scenario: Test Login with invalid login credentials" name="And I get error message" time="0.013">
+  <testcase classname="Scenario: Test Login with invalid login credentials" name="Scenario: Test Login with invalid login credentials" time="0.138">
     <skipped/>
   </testcase>
+  <testcase classname="Scenario: Test Login with invalid login credentials" name="Scenario: Test Login with invalid login credentials" time="0.138"/>
+  <testcase classname="Scenario: Test Login with valid login credentials" name="Given I am in BMJ bestpractice login page" time="0"/>
+  <testcase classname="Scenario: Test Login with valid login credentials" name="When I enter valid credentials" time="0.001">
+    <skipped/>
+  </testcase>
+  <testcase classname="Scenario: Test Login with valid login credentials" name="Then I am logged  in and go to the next page" time="0.001">
+    <skipped/>
+  </testcase>
+  <testcase classname="Scenario: Test Login with valid login credentials" name="Scenario: Test Login with valid login credentials" time="0.141">
+    <skipped/>
+  </testcase>
+  <testcase classname="Scenario: Test Login with valid login credentials" name="Scenario: Test Login with valid login credentials" time="0.141"/>
+  <testcase classname="Scenario: Test Login with valid email and invalid password details" name="Given I am in BMJ bestpractice login page" time="0"/>
+  <testcase classname="Scenario: Test Login with valid email and invalid password details" name="When I enter valid email and invalid password" time="0">
+    <skipped/>
+  </testcase>
+  <testcase classname="Scenario: Test Login with valid email and invalid password details" name="Then I see the error message &quot;The entered sign-in details are incorrect. Please enter a valid username and password and try again.&quot;" time="0.002">
+    <skipped/>
+  </testcase>
+  <testcase classname="Scenario: Test Login with valid email and invalid password details" name="Scenario: Test Login with valid email and invalid password details" time="0.138">
+    <skipped/>
+  </testcase>
+  <testcase classname="Scenario: Test Login with valid email and invalid password details" name="Scenario: Test Login with valid email and invalid password details" time="0.138"/>
+  <testcase classname="Scenario: Test Login with invalid email and valid password details" name="Given I am in BMJ bestpractice login page" time="0"/>
+  <testcase classname="Scenario: Test Login with invalid email and valid password details" name="When I enter invalid email and valid password" time="0">
+    <skipped/>
+  </testcase>
+  <testcase classname="Scenario: Test Login with invalid email and valid password details" name="Then I can see the error message &quot;The entered sign-in details are incorrect. Please enter a valid username and password and try again.&quot;" time="0.004">
+    <skipped/>
+  </testcase>
+  <testcase classname="Scenario: Test Login with invalid email and valid password details" name="Scenario: Test Login with invalid email and valid password details" time="0.09">
+    <skipped/>
+  </testcase>
+  <testcase classname="Scenario: Test Login with invalid email and valid password details" name="Scenario: Test Login with invalid email and valid password details" time="0.09"/>
+  <testcase classname="Scenario: Test Login with blank email and blank password details" name="Given I am in BMJ bestpractice login page" time="0"/>
+  <testcase classname="Scenario: Test Login with blank email and blank password details" name="When I enter blank email and blank password" time="0.001">
+    <skipped/>
+  </testcase>
+  <testcase classname="Scenario: Test Login with blank email and blank password details" name="Then I can see the  message &quot;This field is required..&quot;" time="0.001">
+    <skipped/>
+  </testcase>
+  <testcase classname="Scenario: Test Login with blank email and blank password details" name="Scenario: Test Login with blank email and blank password details" time="0.094">
+    <skipped/>
+  </testcase>
+  <testcase classname="Scenario: Test Login with blank email and blank password details" name="Scenario: Test Login with blank email and blank password details" time="0.096"/>
 </testsuite>

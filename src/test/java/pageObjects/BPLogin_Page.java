@@ -40,5 +40,12 @@ public class BPLogin_Page {
 			return element;
 
 		}
+		public WebElement ele_LoginFailed(WebDriver driver) {
+
+			element = driver.findElement(By.id("loginFailed"));
+
+			return element;
+
+		}
 	}
 
