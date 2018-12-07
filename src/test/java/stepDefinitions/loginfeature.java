@@ -22,12 +22,10 @@ import pageObjects.BPLogin_Page;
 
 
 import org.apache.log4j.Logger;
-import org.junit.Assert;
+
 
 
 	public class loginfeature {
-	
-	
 		
 		private final static Logger logger = Logger.getLogger(loginfeature.class);
 		WebDriver driver = null;
@@ -54,8 +52,8 @@ import org.junit.Assert;
 		    
 		}
 		
-		@When("^I enter invalid credentials$")
-		public void i_enter_invalid_credentials() throws Throwable {
+		@When("^I enter invalid email and invalid password$")
+		public void i_enter_invalid_email_and_invalid_password() throws Throwable {
 		  
 			
 			BPLogin_Page logInPage = new BPLogin_Page();
